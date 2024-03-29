@@ -22,3 +22,16 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Test files and directories
+__tests__/
+test/
+tests/
+spec/
+tests.js
+spec.js
+test.js
+test.css
+test.scss
+test.html
+test.md

@@ -1,0 +1,16 @@
+@import "../../variables";
+@import "../../fonts";
+
+// Importar la fuente Poppins
+@font-face {
+  font-family: "Poppins";
+  src: url("#{$font-path}poppins.woff2") format("woff2"),
+  url("#{$font-path}poppins.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Aplicar la fuente a un elemento
+body {
+  font-family: "Poppins", sans-serif;
+}

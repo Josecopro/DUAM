@@ -1,11 +1,16 @@
-import React from 'react';
-
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+import { componentsByRoute } from "./routes/routes.jsx";
+import './index.css'
 function App() {
     return (
-        <>
-          <h1>DUAM</h1>
-          <p>Aun  no hay nada :(</p>
-        </>
-  );
+        <Router>
+            <Routes>
+                {Object.entries(componentsByRoute).map(([route, componentName]) => (
+                    <Route key={route} path={route} element={componentName} />
+                ))}
+            </Routes>
+        </Router>
+    );
 }
-export {App}
+
+export  {App};

@@ -1,0 +1,76 @@
+.Card{
+    align-self: center;
+    box-sizing: border-box;
+    border: 3px solid azure;
+    height: 63vh;
+    width: 28vw;
+    display: grid;
+    grid-template-rows: 5fr 1fr .1fr;
+    background-color: azure;
+    overflow: hidden;
+    border-radius:.4em;
+    &__Gradient{
+        background-size: 200% 200% ;
+        overflow: hidden;
+        background-color: #f1f1f1;
+        border-radius:.4em;
+    }
+    &__Items{
+        box-sizing: border-box;
+        margin: 1em 2em 0em 2em;
+    }
+    &__Image{
+        position: relative;
+        left: 65px;
+        transform: translateY(-20%);
+        opacity: 1;
+    }
+    &:hover{
+        grid-template-rows: 1fr 1fr .033fr;
+
+    }
+}
+
+@keyframes BackgroundMovement {
+    from{
+        background-size: 150% 150%;
+        background-position: 0 0;
+    }
+    to{
+        background-size: 200% 200%;
+        background-position: 100% 100%;
+    }
+}
+img{
+    height: auto;
+    width: 100%;
+}
+.Card:hover > .Card__Gradient{
+    background: radial-gradient(ellipse at center, #2571d4,#8d9de9,#f1f1f1 70%);
+    animation: BackgroundMovement 5s cubic-bezier(0.42, 0, 0.58, 1) alternate-reverse infinite;
+
+}
+.Card__Link:nth-child(3){
+    opacity: 0;
+    margin: -1em 2em 0em 2em;
+}
+
+.Card:hover > .Card__Link:nth-child(3){
+    opacity: 1;
+    margin: -1em 2em 1em 2em;
+}
+.Card__link--active{
+    text-decoration: none;
+    font-weight: bold;
+}
+.Card__link--active:hover{
+    color: black;   
+}
+.Card__link--active:hover::after{
+    content: ">";
+    font-size: 1em;
+    margin-left: .54em;
+}
+.Transition{
+    transition: .4s ease-in all;
+}

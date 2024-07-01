@@ -7,7 +7,7 @@ const AreaCard = ({ name, image, description, link }) => {
     useEffect(() => {
 
 
-    }, []);
+    }, []);7
     const navigate = useNavigate();
 
     const goToRoute = (route) => {
@@ -23,7 +23,7 @@ const AreaCard = ({ name, image, description, link }) => {
                 <p>{description}</p>
             </div>
             <div className="Card__Link Transition">
-                <button className="Card__link--active" onClick={goToRoute("/Matematicasyciencias")}>Conoce más</button>
+                <a className="Card__link--active" href={goToRoute(link)}>Conoce más</a>
             </div>
         </div>
     );

@@ -2,10 +2,11 @@
     align-self: center;
     box-sizing: border-box;
     border: 3px solid azure;
-    height: 63vh;
-    width: 28vw;
+    height: 28em;
+    width: 21em;
     display: grid;
-    grid-template-rows: 5fr 1fr .1fr;
+    grid-template-rows: 3fr 1fr .1fr;
+    row-gap: .5em;
     background-color: azure;
     overflow: hidden;
     border-radius:.4em;
@@ -26,7 +27,8 @@
         opacity: 1;
     }
     &:hover{
-        grid-template-rows: 1fr 1fr .033fr;
+        grid-template-rows: 2fr .7fr .3fr;
+        transition: .4s ease-out all;
 
     }
 }
@@ -41,6 +43,7 @@
         background-position: 100% 100%;
     }
 }
+
 img{
     height: auto;
     width: 100%;
@@ -52,7 +55,7 @@ img{
 }
 .Card__Link:nth-child(3){
     opacity: 0;
-    margin: -1em 2em 0em 2em;
+    margin: -1em 2em 0em 0em;
 }
 
 .Card:hover > .Card__Link:nth-child(3){
@@ -64,9 +67,12 @@ img{
     font-weight: bold;
 }
 .Card__link--active:hover{
+    cursor: pointer;
     color: black;   
+    transition: .4s all;
 }
 .Card__link--active:hover::after{
+    cursor: pointer;
     content: ">";
     font-size: 1em;
     margin-left: .54em;
